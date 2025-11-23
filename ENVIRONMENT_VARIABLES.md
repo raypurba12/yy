@@ -9,7 +9,7 @@ DB_CONNECTION=sqlite  # or mysql/postgres if using those
 
 ## If using MySQL/PostgreSQL, also set:
 # DB_HOST=your_db_host
-# DB_PORT=your_db_port  
+# DB_PORT=your_db_port
 # DB_DATABASE=your_db_name
 # DB_USERNAME=your_db_username
 # DB_PASSWORD=your_db_password
@@ -30,3 +30,9 @@ LOG_LEVEL=info
 ## For database configuration:
 - For persistent storage, it's recommended to use Railway's PostgreSQL addon instead of SQLite
 - If using SQLite, data will be lost on each deployment/restart since Railway has ephemeral storage
+
+## Troubleshooting Dependency Issues:
+If you encounter service container errors during deployment:
+- Make sure all PHP dependencies are properly installed via composer
+- Clear caches before attempting to cache configuration
+- The vendor directory must be properly included in the deployment

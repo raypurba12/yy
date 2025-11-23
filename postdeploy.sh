@@ -15,7 +15,7 @@ else
     echo "Using provided APP_KEY"
 fi
 
-# Clear any cached configuration
+# Clear any cached configuration that might be corrupted
 php artisan config:clear
 php artisan cache:clear
 php artisan route:clear

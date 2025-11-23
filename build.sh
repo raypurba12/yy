@@ -6,6 +6,12 @@ echo "Starting build process..."
 # Install PHP dependencies
 composer install --no-dev --optimize-autoloader
 
+# Clear any previous caches that might be corrupted
+php artisan cache:clear
+php artisan config:clear
+php artisan route:clear
+php artisan view:clear
+
 # Build frontend assets
 npm install
 npm run build
@@ -16,9 +22,10 @@ if [ -z "$APP_KEY" ]; then
     php artisan key:generate --force
 fi
 
-# Cache configuration for better performance
+# Cache configuration for better performance (only after ensuring dependencies are loaded properly)
 php artisan config:cache
 php artisan route:cache
-php artisan view:cache
+# Skip view:cache if there are issues with policies or auth services
+# php artisan view:cache
 
 echo "Build process completed!"
