@@ -19,6 +19,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Helper functions are loaded via composer.json autoload files section
+        // This avoids issues with facade loading during config:cache
     }
 }
