@@ -1,0 +1,187 @@
+/* Responsivitas tambahan untuk perangkat kecil */
+@media (max-width: 475px) {
+    .sidebar {
+        width: 200px !important;
+    }
+    
+    .sidebar-content {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .nav-item {
+        padding: 0.75rem 1rem !important;
+    }
+    
+    .nav-item span {
+        font-size: 0.875rem !important;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .chart-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .header-content {
+        flex-direction: column !important;
+        gap: 0.5rem !important;
+    }
+    
+    .header-title {
+        text-align: center !important;
+    }
+}
+
+/* Untuk perangkat layar sedang */
+@media (min-width: 640px) and (max-width: 1023px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .chart-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .recent-orders {
+        flex-direction: column !important;
+    }
+    
+    .order-item {
+        justify-content: space-between !important;
+        text-align: left !important;
+    }
+}
+
+/* Perbaikan untuk tampilan mobile */
+.mobile-hidden {
+    display: block;
+}
+
+.desktop-hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .mobile-hidden {
+        display: none;
+    }
+    
+    .desktop-hidden {
+        display: block;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    .sidebar {
+        width: 100% !important;
+        max-width: 280px !important;
+    }
+}
+
+/* Perbaikan untuk teks yang terlalu besar di layar kecil */
+@media (max-width: 640px) {
+    .text-2xl {
+        font-size: 1.25rem !important;
+        line-height: 1.5rem !important;
+    }
+    
+    .text-xl {
+        font-size: 1.125rem !important;
+        line-height: 1.5rem !important;
+    }
+    
+    .text-lg {
+        font-size: 1rem !important;
+        line-height: 1.25rem !important;
+    }
+    
+    .p-4 {
+        padding: 0.75rem !important;
+    }
+    
+    .p-5 {
+        padding: 0.75rem !important;
+    }
+    
+    .gap-5 {
+        gap: 1rem !important;
+    }
+    
+    .gap-4 {
+        gap: 1rem !important;
+    }
+}
+
+/* Perbaikan untuk grafik di layar kecil */
+.chart-container {
+    min-height: 250px;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        min-height: 200px;
+    }
+    
+    .chart-container canvas {
+        min-height: 200px !important;
+    }
+}
+
+/* Perbaikan untuk tabel di berbagai ukuran layar */
+.responsive-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table table {
+    min-width: 600px;
+    width: 100%;
+}
+
+/* Perbaikan untuk tombol dan form di layar kecil */
+@media (max-width: 640px) {
+    .btn {
+        width: 100% !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .form-group {
+        width: 100% !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .flex-row {
+        flex-direction: column !important;
+    }
+    
+    .items-center {
+        align-items: flex-start !important;
+    }
+}
+
+/* Perbaikan untuk kartu statistik */
+.stat-card {
+    min-width: 200px;
+}
+
+@media (max-width: 640px) {
+    .stat-card {
+        min-width: 100% !important;
+    }
+}
+
+/* Perbaikan untuk elemen sidebar */
+.sidebar-logo {
+    font-size: 1.25rem !important;
+}
+
+@media (max-width: 640px) {
+    .sidebar-logo {
+        font-size: 1rem !important;
+    }
+}

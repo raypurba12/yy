@@ -1,0 +1,217 @@
+/* Responsivitas tambahan untuk dashboard */
+.dashboard-stats-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Perbaikan untuk grafik di berbagai ukuran layar */
+.chart-container {
+    height: 280px;
+}
+
+@media (max-width: 640px) {
+    .chart-container {
+        height: 220px;
+    }
+}
+
+@media (max-width: 475px) {
+    .chart-container {
+        height: 200px;
+    }
+}
+
+/* Perbaikan untuk kartu statistik */
+.stat-card {
+    min-width: 200px;
+}
+
+@media (max-width: 640px) {
+    .stat-card {
+        min-width: 100%;
+    }
+}
+
+/* Responsivitas untuk Recent Orders */
+.recent-orders-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (max-width: 475px) {
+    .recent-orders-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .recent-orders-item .order-details {
+        width: 100%;
+        text-align: left;
+    }
+    
+    .recent-orders-item .order-value {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+/* Perbaikan untuk tabel responsif */
+.responsive-table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.responsive-table {
+    min-width: 600px;
+    width: 100%;
+}
+
+/* Responsivitas untuk form */
+.form-grid {
+    display: grid;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .form-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Perbaikan untuk tombol aksi di tabel */
+.table-actions {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 640px) {
+    .table-actions {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+    
+    .table-actions .btn {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Perbaikan untuk ukuran teks di berbagai layar */
+.responsive-text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@media (max-width: 475px) {
+    .responsive-text-sm {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+}
+
+/* Responsivitas untuk produk terlaris */
+.top-products-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+@media (max-width: 475px) {
+    .top-products-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+}
+
+/* Perbaikan untuk tombol di berbagai ukuran layar */
+.responsive-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 475px) {
+    .responsive-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .responsive-btn svg {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+/* Responsivitas untuk header halaman */
+.page-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+    .page-header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/* Responsivitas untuk panel kontrol */
+.control-panel {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+@media (max-width: 640px) {
+    .control-panel {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* Perbaikan untuk dropdown di perangkat mobile */
+.dropdown-mobile-full {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: auto;
+    max-width: calc(100vw - 2rem);
+}
+
+@media (min-width: 640px) {
+    .dropdown-mobile-full {
+        left: auto;
+        max-width: 20rem;
+    }
+}
