@@ -11,6 +11,12 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\RestockController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/run-migration', function() {
+    Artisan::call('migrate', ['--force' => true]);
+    return 'Migration berhasil!';
+});
+
+
 Route::get('/', function () {
     return view('welcome');
 });
